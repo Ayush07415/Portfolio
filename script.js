@@ -331,20 +331,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const btnMoreDetails = document.getElementById('btn-truthlens-more');
-  const detailsExpand = document.getElementById('truthlens-details');
-  if (btnMoreDetails && detailsExpand) {
-    btnMoreDetails.addEventListener('click', () => {
-      const isExpanded = detailsExpand.classList.contains('expanded');
-      if (isExpanded) {
-        detailsExpand.classList.remove('expanded');
-        btnMoreDetails.innerHTML = `More Details <i class="fa-solid fa-chevron-down"></i>`;
-      } else {
-        detailsExpand.classList.add('expanded');
-        btnMoreDetails.innerHTML = `Less Details <i class="fa-solid fa-chevron-up"></i>`;
+  const moreBtns = document.querySelectorAll('.btn-more-toggle');
+  moreBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const card = e.target.closest('.project-card');
+      if (card) {
+        const detailsExpand = card.querySelector('.project-details-expand');
+        if (detailsExpand) {
+          const isExpanded = detailsExpand.classList.contains('expanded');
+          if (isExpanded) {
+            detailsExpand.classList.remove('expanded');
+            btn.innerHTML = `More Details <i class="fa-solid fa-chevron-down"></i>`;
+          } else {
+            detailsExpand.classList.add('expanded');
+            btn.innerHTML = `Less Details <i class="fa-solid fa-chevron-up"></i>`;
+          }
+        }
       }
     });
-  }
+  });
 
   // --- 10. SCROLL REVEAL ANIMATIONS ---
   const revealElements = document.querySelectorAll('.reveal');

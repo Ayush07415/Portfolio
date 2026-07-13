@@ -1869,26 +1869,14 @@ footer {
 /* --- Media Queries (Responsive Styling) --- */
 @media screen and (max-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 4rem;
-    padding-top: 6rem;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 1rem;
+    padding-top: 4rem;
   }
 
-  .hero-content {
-    align-items: center;
-  }
-
-  .hero-paragraph {
-    margin: 0 auto;
-  }
-
-  .hero-ctas {
-    justify-content: center;
-  }
-
-  .social-links {
-    justify-content: center;
+  .hero-visual {
+    transform: scale(0.85);
+    transform-origin: center right;
   }
 
   .about-container {
@@ -1912,11 +1900,34 @@ footer {
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   section {
-    padding: 5rem 6% 3rem;
+    padding: 4rem 5% 3rem;
+  }
+
+  .hero-container {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .typing-container {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    height: 30px;
+  }
+
+  .hero-paragraph {
+    font-size: 0.85rem;
+  }
+
+  .hero-visual {
+    transform: scale(0.55);
+    transform-origin: center right;
+    margin-top: 0;
   }
 
   .nav-toggle {
@@ -1980,13 +1991,36 @@ footer {
 @media screen and (max-width: 580px) {
   .nav-right {
     display: none;
-    /* Hide resume button in header on extremely small viewports to avoid header overflow */
   }
 
   .nav-menu .btn-cyber {
     display: block;
-    /* Add resume button inside mobile menu instead */
     text-align: center;
+  }
+
+  .hero-container {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  }
+
+  .hero-visual {
+    transform: scale(0.4);
+    transform-origin: center right;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hero-ctas .btn-cyber {
+    width: auto;
+    font-size: 0.75rem;
+    padding: 0.6rem 1rem;
   }
 
   .about-dashboard {
@@ -1995,6 +2029,19 @@ footer {
 
   .dashboard-card-wide {
     grid-column: span 1;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .project-action-links {
+    flex-direction: column;
   }
 
   .contact-form {
@@ -2017,7 +2064,6 @@ footer {
 }
 
 @media screen and (max-width: 360px) {
-
   /* Ultra-small layout tweaking */
   section {
     padding-left: 4%;
@@ -2027,6 +2073,14 @@ footer {
   .navbar {
     padding-left: 4%;
     padding-right: 4%;
+  }
+
+  .hero-container {
+    grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  }
+
+  .hero-visual {
+    transform: scale(0.35);
   }
 }
 
