@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Sarkar | Full Stack Developer & AI Engineer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Portfolio of Ayush Sarkar - Full Stack Developer, AI Engineer, and Cyber Security Enthusiast. Building intelligent solutions with machine learning, web technologies, and security in mind.">
+  <meta name="keywords"
+    content="Ayush Sarkar, Portfolio, Full Stack Developer, AI Engineer, Cyber Security, Software Developer, Techno Main Salt Lake, TruthLens AI">
+  <meta name="author" content="Ayush Sarkar">
+
+  <!-- OpenGraph Meta Tags (Social Media Sharing) -->
+  <meta property="og:title" content="Ayush Sarkar | Full Stack Developer & AI Engineer">
+  <meta property="og:description"
+    content="Explore the portfolio of Ayush Sarkar. Specializing in AI, full stack web development, and cyber security systems.">
+  <meta property="og:image" content="assets/hero-developer.png">
+  <meta property="og:url" content="https://github.com/Ayush07415">
+  <meta property="og:type" content="website">
+
+  <!-- Preconnect for Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom Stylesheet (with cache buster) -->
+  <link rel="stylesheet" href="styles.css?v=1.0.2">
+
+  <!-- Overlap & Layout Failsafe Style Override -->
+  <style>
+    .btn-cyber {
+      display: inline-flex !important;
+      overflow: hidden !important;
+      text-decoration: none !important;
+    }
+
+    .cert-button {
+      margin-top: 1.75rem !important;
+      display: inline-flex !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cyberpunk Background Aesthetics -->
+  <div class="cyber-grid" aria-hidden="true"></div>
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Custom Cursor Elements -->
+  <div class="custom-cursor" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header id="header">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#home" class="logo" id="nav-logo">
+        AYUSH SARKAR<span class="logo-dot"></span>
+      </a>
+
+      <button class="nav-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="assets/resume.pdf" download class="btn-cyber btn-solid" id="download-resume-header">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <!-- Hero Left Side Content -->
+        <div class="hero-content reveal">
+          <div class="hero-motto">
+            <span class="logo-dot"></span> System Online
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <br><span class="text-gradient">Ayush Sarkar</span>
+          </h1>
+
+          <!-- Typing Carousel -->
+          <div class="typing-container" aria-live="polite">
+            <span class="typed-text" id="typed-text"></span><span class="typing-cursor" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero-paragraph">
+            Building intelligent solutions with code and creativity. A forward-thinking developer designing full stack
+            applications, analyzing security landscapes, and engineering ML pipelines.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn-cyber btn-solid" id="hero-view-projects">View Projects</a>
+            <a href="#contact" class="btn-cyber btn-secondary" id="hero-contact-me">Contact Me</a>
+          </div>
+
+          <!-- Social Handles -->
+          <div class="social-links">
+            <a href="https://github.com/Ayush07415" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="GitHub Profile" id="social-github">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ayush-sarkar-90530b37b/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="LinkedIn Profile" id="social-linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://leetcode.com/u/TouK9ll096/" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LeetCode Profile" id="social-leetcode">
+              <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="mailto:sarkarayush2004@gmail.com" class="social-icon" aria-label="Send Email" id="social-email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Side Visual -->
+        <div class="hero-visual reveal">
+          <!-- Atmospheric Depth / Neon Reflections -->
+          <div class="cinematic-atmosphere" aria-hidden="true"></div>
+
+          <!-- Futuristic Holographic Projection Platform -->
+          <div class="cyber-platform">
+            <div class="platform-core"></div>
+            <div class="platform-ring platform-ring-1"></div>
+            <div class="platform-ring platform-ring-2"></div>
+            <div class="platform-light-beam"></div>
+          </div>
+
+          <!-- Multiple Holographic Background Rings -->
+          <div class="holo-rings-container" aria-hidden="true">
+            <div class="holo-ring holo-ring-1"></div>
+            <div class="holo-ring holo-ring-2"></div>
+            <div class="holo-ring holo-ring-3"></div>
+            <div class="holo-ring holo-ring-4"></div>
+          </div>
+
+          <!-- Premium 3D Cyberpunk Profile Container -->
+          <div class="cyber-profile-container">
+
+            <!-- AI HUD External Details -->
+            <div class="hud-text hud-top-left">CPU ONLINE | ID-07415</div>
+            <div class="hud-text hud-top-right">SYSTEM READY | GPU ACTIVE</div>
+            <div class="hud-text hud-bottom-left">NEURAL NET | TENSOR</div>
+            <div class="hud-text hud-bottom-right">OPENAI | REACT | SPRING BOOT</div>
+
+            <!-- 3D Sci-Fi Octagonal Frame Wrapper -->
+            <div class="cyber-frame-wrapper">
+              
+              <!-- Frame Corner Modules -->
+              <div class="frame-corner corner-tl"></div>
+              <div class="frame-corner corner-tr"></div>
+              <div class="frame-corner corner-bl"></div>
+              <div class="frame-corner corner-br"></div>
+
+              <!-- Inner Illuminated Border & Chassis -->
+              <div class="frame-inner-chassis"></div>
+
+              <!-- The Image -->
+              <div class="cyber-image-layer">
+                <img src="assets/cyber-photo.png" alt="Ayush Sarkar Cyberpunk Profile" class="cyber-profile-image">
+              </div>
+
+              <!-- Subtle Scanner Line -->
+              <div class="cyber-scanner-line"></div>
+
+              <!-- Premium Tempered Glass Overlay -->
+              <div class="cyber-glass-overlay">
+                <div class="glass-glare"></div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-header reveal">
+        <span class="cyber-subtitle">Identity Core</span>
+        <h2 class="section-title">About <span class="text-gradient">Ayush Sarkar</span></h2>
+      </div>
+
+      <div class="about-container">
+        <!-- Left Side: Bio Narrative -->
+        <div class="about-text reveal">
+          <p class="about-para">
+            I am a motivated Computer Science & Engineering student specializing in Cyber Security at Techno Main Salt
+            Lake, graduation class of 2028. My core expertise covers Java, Spring Boot, Python, and a strong focus on
+            Artificial Intelligence and Machine Learning (AI/ML).
+          </p>
+          <p class="about-para">
+            As a hackathon finalist, I am experienced in backend development, dynamic problem-solving, scalable system
+            structures, and building real-world, data-driven solutions under tight deadlines.
+          </p>
+          <div class="career-goal-box">
+            <div class="career-goal-title">Career Goal</div>
+            <p class="career-goal-text">
+              To become a Full Stack AI Engineer building scalable products and intelligent applications that solve
+              real-world problems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side: Split Dashboard Cards -->
+        <div class="about-dashboard reveal">
+          <!-- Card: Education -->
+          <div class="glass-card dashboard-card dashboard-card-wide tilt-card" id="card-edu">
+            <div class="tilt-inner">
+              <div class="dashboard-icon" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <span class="dashboard-label">Education</span>
+              <div class="dashboard-val">Techno Main Salt Lake</div>
+              <div class="dashboard-subval">B.Tech in CSE (Cyber Security) | GPA: 8.1</div>
+              <div class="dashboard-val" style="margin-top: 0.75rem; font-size: 1.05rem;">Ramakrishna Mission
+                Vivekananda Vidyamandir, Malda</div>
+              <div class="dashboard-subval">Higher Secondary Education | Percentage: 86.2%</div>
+            </div>
+          </div>
+          <!-- Card: Status -->
+          <div class="glass-card dashboard-card tilt-card" id="card-status">
+            <div class="tilt-inner">
+              <div class="dashboard-icon" aria-hidden="true">
+                <i class="fa-solid fa-user-astronaut"></i>
+              </div>
+              <span class="dashboard-label">Current Status</span>
+              <div class="dashboard-val">Student</div>
+              <div class="dashboard-subval">B.Tech (2024 - 2028)</div>
+            </div>
+          </div>
+          <!-- Card: Location -->
+          <div class="glass-card dashboard-card tilt-card" id="card-loc">
+            <div class="tilt-inner">
+              <div class="dashboard-icon" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <span class="dashboard-label">Location</span>
+              <div class="dashboard-val">Kolkata, WB, India</div>
+              <div class="dashboard-subval">Sukantanagar, Sector-3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="section-header reveal">
+        <span class="cyber-subtitle">Skill Matrix</span>
+        <h2 class="section-title">Tech <span class="text-gradient">Capabilities</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="glass-card skill-category reveal tilt-card" id="skills-languages">
+          <div class="tilt-inner">
+            <h3 class="skill-cat-title"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Languages</h3>
+            <div class="skills-list">
+              <span class="skill-badge"><i class="fa-brands fa-java" style="color: #f89820;"></i> Java</span>
+              <span class="skill-badge"><i class="fa-brands fa-python" style="color: #3776ab;"></i> Python</span>
+              <span class="skill-badge"><i class="fa-solid fa-code" style="color: #659ad2;"></i> C</span>
+              <span class="skill-badge"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+              <span class="skill-badge"><i class="fa-solid fa-database" style="color: #00f0ff;"></i> SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="glass-card skill-category reveal tilt-card" id="skills-frontend">
+          <div class="tilt-inner">
+            <h3 class="skill-cat-title"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Frontend</h3>
+            <div class="skills-list">
+              <span class="skill-badge"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML</span>
+              <span class="skill-badge"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS</span>
+              <span class="skill-badge"><i class="fa-solid fa-wind" style="color: #06b6d4;"></i> Tailwind CSS</span>
+              <span class="skill-badge"><i class="fa-brands fa-react" style="color: #61dafb;"></i> React</span>
+              <span class="skill-badge"><i class="fa-brands fa-angular" style="color: #dd0031;"></i> Angular</span>
+              <span class="skill-badge"><i class="fa-solid fa-cubes" style="color: #ffffff;"></i> Next.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="glass-card skill-category reveal tilt-card" id="skills-backend">
+          <div class="tilt-inner">
+            <h3 class="skill-cat-title"><i class="fa-solid fa-server" aria-hidden="true"></i> Backend</h3>
+            <div class="skills-list">
+              <span class="skill-badge"><i class="fa-solid fa-leaf" style="color: #6db33f;"></i> Spring Boot</span>
+              <span class="skill-badge"><i class="fa-solid fa-gears" style="color: #00f0ff;"></i> REST APIs</span>
+              <span class="skill-badge"><i class="fa-solid fa-key" style="color: #ff007f;"></i> JWT
+                Authentication</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="glass-card skill-category reveal tilt-card" id="skills-databases">
+          <div class="tilt-inner">
+            <h3 class="skill-cat-title"><i class="fa-solid fa-database" aria-hidden="true"></i> Databases</h3>
+            <div class="skills-list">
+              <span class="skill-badge"><i class="fa-solid fa-elephant" style="color: #336791;"></i> PostgreSQL</span>
+              <span class="skill-badge"><i class="fa-solid fa-server" style="color: #f29111;"></i> MySQL</span>
+              <span class="skill-badge"><i class="fa-solid fa-fire" style="color: #ffca28;"></i> Firebase</span>
+              <span class="skill-badge"><i class="fa-solid fa-bolt" style="color: #3ecf8e;"></i> Supabase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI / Machine Learning -->
+        <div class="glass-card skill-category reveal tilt-card" id="skills-ai-ml">
+          <div class="tilt-inner">
+            <h3 class="skill-cat-title"><i class="fa-solid fa-brain" aria-hidden="true"></i> AI & ML</h3>
+            <div class="skills-list">
+              <span class="skill-badge"><i class="fa-solid fa-robot" style="color: #10b981;"></i> OpenAI API</span>
+              <span class="skill-badge"><i class="fa-solid fa-network-wired" style="color: #ff6f00;"></i>
+                TensorFlow</span>
+              <span class="skill-badge"><i class="fa-solid fa-chart-line" style="color: #f89820;"></i>
+                Scikit-learn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="glass-card skill-category reveal tilt-card" id="skills-tools">
+          <div class="tilt-inner">
+            <h3 class="skill-cat-title"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Tools</h3>
+            <div class="skills-list">
+              <span class="skill-badge"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i> Git</span>
+              <span class="skill-badge"><i class="fa-brands fa-github" style="color: #ffffff;"></i> GitHub</span>
+              <span class="skill-badge"><i class="fa-solid fa-space-shuttle" style="color: #ff6c37;"></i> Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="section-header reveal">
+        <span class="cyber-subtitle">Chronology</span>
+        <h2 class="section-title">Timeline of <span class="text-gradient">Contributions</span></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Open Source Contributor</h3>
+              <div class="timeline-company">Hacktoberfest, Winter of Code</div>
+            </div>
+            <div class="timeline-date">Global Rank</div>
+          </div>
+          <p class="timeline-desc">
+            Ranked among the Top 10,000 contributors globally in Hacktoberfest, demonstrating consistent open-source
+            contributions. Also participated in Winter of Code, contributing to real-world open-source projects by
+            implementing features, fixing bugs, improving documentation, and collaborating with maintainers using Git
+            and GitHub workflows, further strengthening software development and teamwork skills.
+          </p>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Hackathon Participant</h3>
+              <div class="timeline-company">5 Hackathons (3x Finalist)</div>
+            </div>
+            <div class="timeline-date">3x Finalist</div>
+          </div>
+          <p class="timeline-desc">
+            Turned ambitious ideas into working prototypes by collaborating with diverse teams in competitive hackathons. Secured Finalist positions in 3 out of 5 hackathons, building AI-powered and full-stack solutions while mastering rapid prototyping, API integration, collaborative development, and agile problem-solving under time constraints.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <span class="cyber-subtitle">Featured Project</span>
+        <h2 class="section-title">Project <span class="text-gradient">Spotlight</span></h2>
+      </div>
+
+      <div class="projects-container">
+        <!-- TruthLens AI Project Card -->
+        <div class="glass-card project-card reveal tilt-card" id="project-truthlens">
+          <!-- Left side image -->
+          <div class="project-img-wrapper">
+            <img src="assets/truthlens-dashboard.png"
+              alt="TruthLens AI Fake News Detection visual interface showing analytical metrics and NLP classification indicators"
+              class="project-img">
+          </div>
+
+          <!-- Right side details -->
+          <div class="project-info tilt-inner">
+            <div class="project-badges">
+              <div class="project-status">
+                <i class="fa-solid fa-microchip"></i> IN PROGRESS
+              </div>
+              <div class="project-role">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> TEAM PROJECT
+              </div>
+            </div>
+            
+            <div class="project-title-row">
+              <h3 class="project-title">TruthLens <span class="text-gradient" style="background: linear-gradient(90deg, #00f0ff, #ff007f); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI</span></h3>
+            </div>
+            <div class="project-subtitle">Fake News Detection System</div>
+
+            <p class="project-desc">
+              An AI-powered platform that helps users verify the credibility of online news articles and social media content.
+            </p>
+
+            <div class="project-links">
+              <button type="button" class="btn-more-minimal" id="btn-truthlens-more">
+                More Details <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <!-- Collapsible details container -->
+            <div class="project-details-expand" id="truthlens-details">
+              <!-- Tech badges -->
+              <div class="project-tech">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Chrome Extension API</span>
+                <span class="tech-badge ml-badge">Python</span>
+                <span class="tech-badge ml-badge">Flask</span>
+                <span class="tech-badge ml-badge">Scikit-learn</span>
+                <span class="tech-badge ml-badge">NLP</span>
+              </div>
+              
+              <!-- Core features list -->
+              <div class="project-features">
+                <span class="project-feature-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> NLP Text Analysis</span>
+                <span class="project-feature-item"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Fake News Detection</span>
+                <span class="project-feature-item"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Chrome Extension integration</span>
+                <span class="project-feature-item"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i> AI Confidence Score</span>
+              </div>
+
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">
+                <strong>Role & Contribution:</strong> Backend Development, ML Model Training, NLP Pipeline, AI Integration, API Development.
+              </div>
+              
+              <div class="project-action-links" style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                <a href="https://github.com/Ayush07415/truthlens-ai" target="_blank" rel="noopener noreferrer" class="btn-cyber btn-solid" id="btn-truthlens-github">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <button class="btn-cyber btn-secondary" disabled title="Coming Soon" id="btn-truthlens-demo">
+                  Coming Soon
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+      <div class="section-header reveal">
+        <span class="cyber-subtitle">Credentials</span>
+        <h2 class="section-title">Verified <span class="text-gradient">Certifications</span></h2>
+      </div>
+
+      <div class="certs-grid">
+        <!-- Cisco -->
+        <div class="glass-card cert-card reveal tilt-card" id="cert-cisco">
+          <div class="tilt-inner">
+            <div class="cert-header">
+              <div class="cert-icon" aria-hidden="true">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="cert-meta">
+                <span class="cert-org">Cisco</span>
+                <h3 class="cert-title">Networking & Cyber Security</h3>
+              </div>
+            </div>
+            <p class="cert-desc">
+              Training focused on core networking infrastructure, routing protocol principles, and computer network
+              security designs.
+            </p>
+            <a href="assets/cert-cisco.jpg" target="_blank" rel="noopener noreferrer"
+              class="btn-cyber btn-secondary cert-button" id="btn-cert-cisco"
+              style="text-decoration: none; text-align: center;">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- NPTEL Java -->
+        <div class="glass-card cert-card reveal tilt-card" id="cert-nptel">
+          <div class="tilt-inner">
+            <div class="cert-header">
+              <div class="cert-icon" aria-hidden="true">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="cert-meta">
+                <span class="cert-org">NPTEL</span>
+                <h3 class="cert-title">DSA using Java</h3>
+              </div>
+            </div>
+            <p class="cert-desc">
+              Data Structures and Algorithms course verification, focused on sorting algorithms, graphs, dynamic
+              programming, and complexity.
+            </p>
+            <a href="assets/cert-dsa-java.pdf" target="_blank" rel="noopener noreferrer"
+              class="btn-cyber btn-secondary cert-button" id="btn-cert-nptel"
+              style="text-decoration: none; text-align: center;">View Certificate</a>
+          </div>
+        </div>
+
+        <!-- NPTEL C -->
+        <div class="glass-card cert-card reveal tilt-card" id="cert-nptel-c">
+          <div class="tilt-inner">
+            <div class="cert-header">
+              <div class="cert-icon" aria-hidden="true">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="cert-meta">
+                <span class="cert-org">NPTEL</span>
+                <h3 class="cert-title">Programming in C</h3>
+              </div>
+            </div>
+            <p class="cert-desc">
+              Introduction to problem solving and structural programming concepts in C, covering conditions, loops,
+              functions, and pointers.
+            </p>
+            <a href="assets/cert-programming-c.pdf" target="_blank" rel="noopener noreferrer"
+              class="btn-cyber btn-secondary cert-button" id="btn-cert-nptel-c"
+              style="text-decoration: none; text-align: center;">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-header reveal">
+        <span class="cyber-subtitle">Connection Channel</span>
+        <h2 class="section-title">Get in <span class="text-gradient">Touch</span></h2>
+      </div>
+
+      <div class="contact-container">
+        <!-- Contact details left -->
+        <div class="contact-info reveal">
+          <p class="contact-para">
+            Have an open-source project, a hackathon collaboration opportunity, or a role that matches my skills? Leave
+            a message or contact me via my links below.
+          </p>
+
+          <div class="contact-methods">
+            <!-- Email -->
+            <div class="contact-method-card">
+              <div class="contact-method-icon" aria-hidden="true">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-method-details">
+                <span class="contact-method-label">Direct Link</span>
+                <a href="mailto:sarkarayush2004@gmail.com" class="contact-method-val"
+                  id="contact-val-email">sarkarayush2004@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-method-card">
+              <div class="contact-method-icon" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-method-details">
+                <span class="contact-method-label">Current Zone</span>
+                <span class="contact-method-val">Sukantanagar, Sector-3, Kolkata, 700001</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social networks list -->
+          <div class="social-links" style="margin-top: 1rem;">
+            <a href="https://github.com/Ayush07415" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="GitHub Profile" id="contact-github">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ayush-sarkar-90530b37b/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="LinkedIn Profile" id="contact-linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://leetcode.com/u/TouK9ll096/" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LeetCode Profile" id="contact-leetcode">
+              <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form right -->
+        <div class="contact-form-container reveal">
+          <form class="contact-form" id="contact-form">
+            <div class="form-notification success" id="form-success" role="alert">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Message sent successfully. Secure link
+              established!
+            </div>
+            <div class="form-notification error" id="form-error" role="alert">
+              <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Failed to send. Please check your
+              connection parameters and try again.
+            </div>
+
+            <div class="form-group">
+              <label for="form-name" class="form-label">Identifier (Name)</label>
+              <input type="text" id="form-name" name="user_name" class="form-input" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Return Address (Email)</label>
+              <input type="email" id="form-email" name="user_email" class="form-input" placeholder="your@email.com"
+                required>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="form-subject" class="form-label">Transmission Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="Subject Header"
+                required>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="form-message" class="form-label">Data payload (Message)</label>
+              <textarea id="form-message" name="message" class="form-input"
+                placeholder="Compose transmission payload..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-cyber btn-solid form-submit-btn" id="btn-submit-contact">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Transmission
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-branding">
+        <a href="#home" class="logo" style="font-size: 1.3rem;">
+          AYUSH SARKAR<span class="logo-dot"></span>
+        </a>
+        <p class="footer-motto">
+          Building intelligent solutions with code and creativity.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <span class="footer-nav-title">Quick Directory</span>
+        <ul class="footer-nav-links">
+          <li><a href="#home" class="footer-nav-link">Home</a></li>
+          <li><a href="#about" class="footer-nav-link">About</a></li>
+          <li><a href="#skills" class="footer-nav-link">Skills</a></li>
+          <li><a href="#experience" class="footer-nav-link">Experience</a></li>
+          <li><a href="#projects" class="footer-nav-link">Projects</a></li>
+          <li><a href="#certifications" class="footer-nav-link">Certifications</a></li>
+          <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="copyright">
+        &copy; 2026 Ayush Sarkar. All Rights Reserved. Systems initialized.
+      </span>
+      <a href="#home" class="back-to-top" aria-label="Scroll back to top" id="footer-back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // Initialize EmailJS with your PUBLIC_KEY
+      // You will get this from the EmailJS dashboard
+      emailjs.init({
+        publicKey: "DyzQTZQqlwELegyRg",
+      });
+    })();
+  </script>
+
+  <!-- Cyberpunk Music Player -->
+  <div class="cyber-music-player minimized" id="music-player">
+    <audio id="bg-audio" src="assets/audio/background.mp3" preload="metadata" loop></audio>
+    
+    <!-- Play/Pause Button -->
+    <button class="music-toggle-btn" id="music-toggle" aria-label="Play/Pause Music">
+      <i class="fa-solid fa-music" id="music-main-icon"></i>
+      <div class="mini-equalizer" id="mini-eq">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
